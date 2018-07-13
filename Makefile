@@ -5,7 +5,7 @@ clean:
 
 setup:
 	    go get -d github.com/golang/dep
-	    dep ensure
+	    $(GOBIN)/dep ensure
 
 build:
 	    go build -o $(APPNAME)
