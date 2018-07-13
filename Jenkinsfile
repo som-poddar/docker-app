@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('build binary') {
       steps {
-        sh 'make clean'
         sh 'make setup'
         sh 'make build'
       }
