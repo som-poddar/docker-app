@@ -3,8 +3,8 @@ pipeline {
   stages {
     stage('build binary') {
       steps {
-        sh 'make setup'
-        sh 'make build'
+        sh 'mkdir -p $GOPATH/src/github.com/som-poddar/docker-app'
+        sh 'cd $GOPATH/src/github.com/som-poddar/docker-app && make setup make build'
       }
     }
     stage('build image') {
