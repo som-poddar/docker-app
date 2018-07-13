@@ -4,7 +4,7 @@ clean:
 	    rm $(APPNAME)
 
 setup:
-	    go get -d github.com/golang/dep
+	    # go get -d github.com/golang/dep
 	    dep ensure
 
 build:
