@@ -19,6 +19,7 @@ pipeline {
       }
     }
   }
+
 environment {
   GOPATH = '/go'
   }
