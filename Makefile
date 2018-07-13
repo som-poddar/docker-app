@@ -18,7 +18,7 @@ run:
 	./$(APPNAME)
 
 dockerbuild:
-	docker build -t ellation/docker-app .
+	docker build -t spoddarellation/docker-app .
 
 dockerrun:
 	docker run ellation/docker-app
