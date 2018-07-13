@@ -12,6 +12,7 @@ build:
 
 build-mac:
 	   GOOS=linux GOARCH=arm  go build -o $(APPNAME)
+
 run:
 	./$(APPNAME)
 
@@ -20,3 +21,9 @@ dockerbuild:
 
 dockerrun:
 	docker run --rm -p 8080:8080 ellation/docker-app
+
+dockerhublogin:
+	docker login -u spoddarellation -p secret
+
+dockerpush:
+	docker push spoddarellation/docker-app:latest
