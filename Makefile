@@ -23,7 +23,7 @@ dockerrun:
 	docker run --rm -p 8080:8080 ellation/docker-app
 
 dockerhublogin:
-	docker login -u spoddarellation -p secret
+	docker login -u spoddarellation -p ellation # plain text for now, should be env variable in future
 
 dockerpush:
 	docker push spoddarellation/docker-app:latest
