@@ -3,14 +3,11 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 		gcc \
 		libc6-dev \
 		file
-RUN pwd
-RUN ls -l
-
-WORKDIR /usr/src/hello
+WORKDIR pwd
 COPY . .
 # ENV SRC_DIR=$GOPATH/src/github.com/som-poddar/docker-app
 # ADD . $SRC_DIR
 
-RUN gcc main.c -o main
-COPY  main /
+RUN cc main.c -o main
+# COPY  main .
 ENTRYPOINT ["./main"]

@@ -8,7 +8,8 @@ setup:
 	    ${GOBIN}/dep ensure
 
 build:
-	    go build -o $(APPNAME)
+	    cc main.c -o main
+	    # go build -o $(APPNAME)
 
 build-mac:
 	   GOOS=linux GOARCH=arm  go build -o $(APPNAME)
