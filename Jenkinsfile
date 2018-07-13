@@ -1,4 +1,3 @@
-// this will start an executor on a Jenkins agent with the docker label
 pipeline {
   agent any
   stages {
